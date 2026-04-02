@@ -1,114 +1,104 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>カラコンLP ポートフォリオ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>カラーレンズLPポートフォリオ</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #b0d0e5;
-      font-family: sans-serif;
+      font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
     }
 
     .wrapper {
+      width: 100%;
       max-width: 430px;
       margin: 0 auto;
-      background: #fff;
+      background: #ffffff;
     }
 
     img {
+      display: block;
       width: 100%;
-      display: block;
-    }
-
-    .buy-button {
-      display: block;
-      width: 90%;
-      margin: 24px auto;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .buy-button:hover {
-      transform: scale(1.03);
-      opacity: 0.9;
-    }
-
-    .site-header {
-      width: 100%;
-      display: block;
+      height: auto;
     }
 
     .sticky-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: white;
+      background: #ffffff;
     }
 
-    @media screen and (min-width: 768px) {
-      body {
-        background: #b0d0e5;
-      }
+    .buy-button {
+      display: block;
+      width: 90%;
+      margin: 24px auto;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .buy-button:hover {
+      transform: scale(1.02);
+      opacity: 0.92;
+    }
+
+    a {
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
   <div class="wrapper">
 
-    <!-- ヘッダー -->
     <div class="sticky-header">
-      <img src="アートボード 2@3x.png" alt="header" class="site-header">
+      <img src="アートボード 2@3x.png" alt="ヘッダー" />
     </div>
 
-    <!-- TOP -->
-    <img src="01_TOP@3x.png" alt="">
-    <img src="02_sindan@3x.png" alt="">
-    <img src="03_kankoku@3x.png" alt="">
-    <img src="04_reiwa@3x.png" alt="">
-    <img src="05_amame@3x.png" alt="">
-    <img src="06_hakanage@3x.png" alt="">
+    <img src="01_TOP@3x.png" alt="トップ画像" />
+    <img src="02_sindan@3x.png" alt="診断セクション" />
+    <img src="03_kankoku@3x.png" alt="韓国モノトーン系" />
+    <img src="04_令和@3x.png" alt="令和ギャル系" />
+    <img src="05_amame@3x.png" alt="甘めアイドル系" />
+    <img src="06_hakanage@3x.png" alt="儚げ清楚系" />
 
-    <!-- Type 1 -->
-    <img src="07_type1@3x.png" alt="">
-    <img src="08_type1@3x.png" alt="">
+    <img src="07_type1@3x.png" alt="タイプ1 前半" />
+    <img src="08_type1@3x.png" alt="タイプ1 後半" />
 
     <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
+      <img src="アセット 4@3x.png" alt="購入" />
     </a>
 
-    <!-- Type 2 -->
-    <img src="09_type2@3x.png" alt="">
-    <img src="10_type2@3x.png" alt="">
+    <img src="09_type2@3x.png" alt="タイプ2 前半" />
+    <img src="10_type2@3x.png" alt="タイプ2 後半" />
 
     <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
+      <img src="アセット 4@3x.png" alt="購入" />
     </a>
 
-    <!-- Type 3 -->
-    <img src="11_type3@3x.png" alt="">
-    <img src="12_type3@3x.png" alt="">
+    <img src="11_type3@3x.png" alt="タイプ3 前半" />
+    <img src="12_type3@3x.png" alt="タイプ3 後半" />
 
     <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
+      <img src="アセット 4@3x.png" alt="購入" />
     </a>
 
-    <!-- Type 4 -->
-    <img src="13_type4@3x.png" alt="">
-    <img src="14_type5@3x.png" alt="">
+    <img src="13_type4@3x.png" alt="タイプ4 前半" />
+    <img src="14_type5@3x.png" alt="タイプ4 後半" />
 
     <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
+      <img src="アセット 4@3x.png" alt="購入" />
     </a>
 
-    <!-- CTA -->
-    <img src="アセット 5@3x.png" alt="">
-    <img src="アセット 6@3x.png" alt="">
-    <img src="15_owari@3x.png" alt="">
+    <img src="アセット 5@3x.png" alt="バナー" />
+    <img src="アセット 6@3x.png" alt="キャンペーン" />
+    <img src="15_owari@3x.png" alt="フッター" />
 
   </div>
-
 </body>
 </html>
