@@ -72,64 +72,69 @@
     }
 
     /* レポスライダー */
-    .report-slider {
-      position: relative;
-      width: calc(100% - 64px);
-      margin: -235px auto 88px;
-      overflow: hidden;
-    }
-
-    .report-track {
-      display: flex;
-      transition: transform 0.35s ease;
-    }
-
-    .report-slide {
-      min-width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background: #ece8e2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .report-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .report-dots {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .report-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(70, 70, 70, 0.35);
-      padding: 0;
-      cursor: pointer;
-    }
-
-    .report-dot.active {
-      background: rgba(70, 70, 70, 0.9);
-    }
-
     .type-block {
-      position: relative;
+    position: relative;
     }
 
-    .type-block .report-slider {
-      margin-top: -238px;
-      margin-bottom: 86px;
+    .report-base {
+    position: relative;
     }
 
+    .report-base > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+
+/* PDFの「みんなのレポ」枠に重ねる */
+  .report-slider {
+  position: absolute;
+  left: 11.5%;
+  top: 36.5%;
+  width: 77%;
+  overflow: hidden;
+  }
+
+  .report-track {
+  display: flex;
+  transition: transform 0.35s ease;
+  }
+
+  .report-slide {
+  min-width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: transparent;
+  }
+
+  .report-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  }
+
+  .report-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  }
+
+  .report-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(80, 80, 80, 0.28);
+  padding: 0;
+  cursor: pointer;
+  }
+
+  .report-dot.active {
+  background: rgba(80, 80, 80, 0.92);
+  }
+    
     /* ここ追加：アセット5の下余白32px */
     .banner-spacing {
       margin-bottom: 32px;
@@ -174,7 +179,10 @@
     <!-- Type 1 -->
     <div class="type-block">
       <img src="07_type1@3x.png" alt="タイプ1 前半" />
-      <img src="08_type1@3x.png" alt="タイプ1 後半" />
+
+      <div class="report-base">
+        <img src="08_type1@3x.png" alt="タイプ1 後半" />
+
       <div class="report-slider">
         <div class="report-track">
           <div class="report-slide"><img src="report1_1.png" alt=""></div>
@@ -182,16 +190,12 @@
           <div class="report-slide"><img src="report1_3.png" alt=""></div>
         </div>
         <div class="report-dots">
-          <button class="report-dot active"></button>
-          <button class="report-dot"></button>
-          <button class="report-dot"></button>
+          <button class="report-dot active" type="button"></button>
+          <button class="report-dot" type="button"></button>
+          <button class="report-dot" type="button"></button>
         </div>
       </div>
-    </div>
 
-    <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
-    </a>
 
     <!-- Type 2 -->
     <div class="type-block">
@@ -211,53 +215,50 @@
       </div>
     </div>
 
-    <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
-    </a>
-
     <!-- Type 3 -->
-    <div class="type-block">
-      <img src="11_type3@3x.png" alt="タイプ3 前半" />
-      <img src="12_type3@3x.png" alt="タイプ3 後半" />
-      <div class="report-slider">
-        <div class="report-track">
-          <div class="report-slide"><img src="report3_1.png" alt=""></div>
-          <div class="report-slide"><img src="report3_2.png" alt=""></div>
-          <div class="report-slide"><img src="report3_3.png" alt=""></div>
-        </div>
-        <div class="report-dots">
-          <button class="report-dot active"></button>
-          <button class="report-dot"></button>
-          <button class="report-dot"></button>
-        </div>
+<div class="type-block">
+  <img src="11_type3@3x.png" alt="タイプ3 前半" />
+
+  <div class="report-base">
+    <img src="12_type3@3x.png" alt="タイプ3 後半" />
+
+    <div class="report-slider">
+      <div class="report-track">
+        <div class="report-slide"><img src="report3_1.png" alt=""></div>
+        <div class="report-slide"><img src="report3_2.png" alt=""></div>
+        <div class="report-slide"><img src="report3_3.png" alt=""></div>
+      </div>
+      <div class="report-dots">
+        <button class="report-dot active" type="button"></button>
+        <button class="report-dot" type="button"></button>
+        <button class="report-dot" type="button"></button>
       </div>
     </div>
+  </div>
+</div>
 
-    <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
-    </a>
-
+        
     <!-- Type 4 -->
-    <div class="type-block">
-      <img src="13_type4@3x.png" alt="タイプ4 前半" />
-      <img src="14_type5@3x.png" alt="タイプ4 後半" />
-      <div class="report-slider">
-        <div class="report-track">
-          <div class="report-slide"><img src="report4_1.png" alt=""></div>
-          <div class="report-slide"><img src="report4_2.png" alt=""></div>
-          <div class="report-slide"><img src="report4_3.png" alt=""></div>
-        </div>
-        <div class="report-dots">
-          <button class="report-dot active"></button>
-          <button class="report-dot"></button>
-          <button class="report-dot"></button>
-        </div>
+<div class="type-block">
+  <img src="13_type4@3x.png" alt="タイプ4 前半" />
+
+  <div class="report-base">
+    <img src="14_type5@3x.png" alt="タイプ4 後半" />
+
+    <div class="report-slider">
+      <div class="report-track">
+        <div class="report-slide"><img src="report4_1.png" alt=""></div>
+        <div class="report-slide"><img src="report4_2.png" alt=""></div>
+        <div class="report-slide"><img src="report4_3.png" alt=""></div>
+      </div>
+      <div class="report-dots">
+        <button class="report-dot active" type="button"></button>
+        <button class="report-dot" type="button"></button>
+        <button class="report-dot" type="button"></button>
       </div>
     </div>
-
-    <a href="#" class="buy-button">
-      <img src="アセット 4@3x.png" alt="購入">
-    </a>
+  </div>
+</div>
 
     <!-- ここだけ class追加 -->
     <img src="アセット 5@3x.png" alt="バナー" class="banner-spacing" />
